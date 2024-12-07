@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background GIF */
+        body {
+            background: url('https://i.pinimg.com/originals/77/2b/7a/772b7a67c42e3f36145b18300f567dc6.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Add some padding to the text */
+        .content {
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .btn-lg {
+            font-size: 1.2rem;
+        }
+
+        .btn-danger, .btn-success {
+            transition: all 0.3s ease;
+        }
+
+        .btn-danger:hover, .btn-success:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .paragraph {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .text-animate {
+            animation: textAnimation 1.5s infinite alternate;
+        }
+
+        @keyframes textAnimation {
+            0% { color: #ffcc00; }
+            100% { color: #00ffcc; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content text-center fade-in">
+            <h1 class="text-animate">Welcome to the Eye Pressure Test</h1>
+            <p class="paragraph mt-4">
+                
+                This project focuses on the development of an automated system for measuring eye pressure, a key indicator in diagnosing and monitoring eye health, particularly in detecting conditions like glaucoma. Glaucoma, a leading cause of blindness, often develops without noticeable symptoms, making early detection essential for effective management. This system aims to simplify the process of eye pressure testing through a user-friendly interface, providing a non-invasive and efficient method for individuals to assess their eye health.
+                
+                The system is built using Flask for the backend, allowing users to easily access the test through a web interface. It includes features such as user authentication, allowing users to log in securely, and interactive forms for starting the test. The system records the eye pressure test results and provides a summary of the findings, offering insights into the potential need for further medical consultation. 
+                
+                Key highlights of the project include:
+                1. User-Centric Design: The web application is designed to be accessible and easy to use, with clear instructions and simple navigation for users of all technical backgrounds.
+                2. Real-Time Test Interface: The system offers real-time feedback during the test, guiding the user through each step and ensuring accuracy in the results.
+                3. Security Features: The application incorporates login and logout functionality to safeguard personal health data.
+                4. Responsive and Attractive UI: Using Bootstrap, the interface is responsive and visually engaging, with animations and background elements to enhance user experience.
+                5. Educational Content: The system includes informative content about eye health and the importance of regular eye pressure testing, helping users better understand the significance of the results.
+                
+               </p>
+
+            <div class="text-center mt-4">
+                
+                <form action="/ready" method="POST" class="mt-3">
+                    <button type="submit" class="btn btn-success btn-lg">Ready for Test</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
